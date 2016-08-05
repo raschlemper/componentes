@@ -1,0 +1,38 @@
+[
+  {
+    "id":1,
+    "username": "Sentre94",
+    "name":"Eduarda Dias",
+    "lastName":"Souza",
+    "email":"EduardaDiasSouza@armyspy.com",
+    "phone": "(21) 7067-2144"
+  },{
+    "id":2,
+    "username": "Suptiele1966",
+    "name":"Giovanna Pinto",
+    "lastName":"Melo",
+    "email":"GiovannaPintoMelo@dayrep.com",
+    "phone": "(51) 3735-5564"
+  },{
+    "id":3,
+    "username": "Wealwasely",
+    "name":"João Melo",
+    "lastName":"Carvalho",
+    "email":"JoaoMeloCarvalho@armyspy.com",
+    "phone": "(75) 6018-7059"
+  },{
+    "id":4,
+    "username": "Chammat",
+    "name":"Vinicius Melo",
+    "lastName":"Barbosa",
+    "email":"ViniciusMeloBarbosa@rhyta.com",
+    "phone": "(21) 7704-9923"
+  },{
+    "id":5,
+    "username": "Thrioned",
+    "name":"Bruno Correia",
+    "lastName":"Cardoso",
+    "email":"BrunoCorreiaCardoso@armyspy.com",
+    "phone": "(91) 3665-8196"
+  }
+]
