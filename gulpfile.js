@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var install = require('gulp-install');
-var html2js = require('gulp-html2js');
+var ngHtml2Js = require("gulp-ng-html2js");
 var htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglifyjs');
 var filesize = require('gulp-filesize');
@@ -41,12 +41,10 @@ gulp.task('table-css', function () {
 gulp.task('table-template', function() {
   	gulp.src('table/src/templates/*.html')
         .pipe(htmlminConfig())
-        .pipe(html2js('app-table-tpls.js', {
-            adapter: 'angular',
-            base: 'app',
-            name: 'appTable.templates',
-        	singleModule: true,
-        }))
+        .pipe(ngHtml2Js({
+	        moduleName: "appTable.templates"
+	    }))
+    	.pipe(concat('app-table-tpls.js'))
         .pipe(gulp.dest('table/dist/js/'));
 });
 

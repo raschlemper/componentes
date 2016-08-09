@@ -19,43 +19,19 @@ angular.module('appTable', [
 
 .directive('appTable', ['$filter', function ($filter) {
 
-    // var template = '<table class="table table-striped table-bordered table-hover table-condensed">' +
-    //     '<thead>' +
-    //         '<tr>  ' +          
-    //             '<th ng-repeat="column in columns track by $index" ' +
-    //                 'ng-click="orderColumn(listaFiltrada, column.value, reverse)"' +
-    //                 'ng-class="{sortorder_asc  : !reverse && predicate === column.value, ' +
-    //                            'sortorder_desc :  reverse && predicate === column.value, ' +
-    //                            'sortorder      :             predicate !== column.value}">' +
-    //                 '{{column.label}}' +
-    //             '</th>     ' +       
-    //         '</tr>' +
-    //     '</thead>' +
-    //     '<tbody>' +
-    //         '<tr ng-repeat="item in listaFiltrada = filterList(list, search) | ' +
-    //                        'orderBy : predicate : reverse | ' +
-    //                        'limitTo : limitTo.value : start track by $index">      ' +      
-    //             '<td ng-repeat="column in columns track by $index">' +
-    //                 '<span compile="getColumn(item, column)"></span>' +
-    //             '</td>   ' +         
-    //         '</tr>' +
-    //     '</tbody>' +
-    // '</table>';
-    
     return {
 
         restrict: 'E',
-        templateUrl: '../table/src/templates/app-table.html',
-        // template: template,
+        templateUrl: 'app-table.html',
         scope: {
             list: '=',
             columns: '=',
         },
-        transclude: {
-            'filterContent': '?filterContent',
-            'titleContent': '?titleContent',
-            'rodapeContent': '?rodapeContent'
-        },
+        // transclude: {
+        //     'filterContent': '?filterContent',
+        //     'titleContent': '?titleContent',
+        //     'rodapeContent': '?rodapeContent'
+        // },
 
         link: function($scope, element, attr, controller, transclude) {               
                         

@@ -45,7 +45,7 @@ angular.module('appTable', [
     return {
 
         restrict: 'E',
-        templateUrl: '../table/src/templates/app-table.html',
+        templateUrl: 'app-table.html',
         // template: template,
         scope: {
             list: '=',
