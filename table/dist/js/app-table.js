@@ -83,8 +83,8 @@ angular.module('appTable', [
             $scope.getColumn = function(item, column) {
                 var columns = column.value.split('.');
                 var value = getColumn(item, angular.copy(columns));
-                // if(column.filter && column.filter.callback){ value = $filter(column.filter.name)(value, coluna.filter.callback); }
-                // else if(column.filter){ value = $filter(column.filter.name)(value, column.filter.args); }
+                if(column.filter && column.filter.callback){ value = $filter(column.filter.name)(value, coluna.filter.callback); }
+                else if(column.filter){ value = $filter(column.filter.name)(value, column.filter.args); }
                 return value;
             };
             
