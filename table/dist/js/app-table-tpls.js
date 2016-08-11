@@ -10,6 +10,6 @@ module.run(['$templateCache', function($templateCache) {
     '                           sortorder_desc :  reverse && predicate === column.value, \n' +
     '                           sortorder      :             predicate !== column.value}">{{column.label}}</th></tr></thead><tbody><tr ng-repeat="item in listaFiltrada = filterList(list, search) | \n' +
     '                       orderBy : predicate : reverse | \n' +
-    '                       limitTo : limitTo.value : start track by $index"><td ng-repeat="column in columns track by $index"><span compile="getColumn(item, column)"></span></td></tr></tbody></table>');
+    '                       limitTo : limitTo.value : start track by $index"><td ng-repeat="column in columns track by $index" compile="getColumn(item, column)"></td></tr></tbody></table>');
 }]);
 })();
