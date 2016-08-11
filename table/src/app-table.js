@@ -54,12 +54,12 @@ angular.module('appTable', [
                 getStart();
                 getFinish();
                 $scope.orderBy();
-                // eventTable($scope.listaFiltrada);
+                // eventTable($scope.listFiltered);
             };
             
             var getSizeTotal = function() {
-                if(!$scope.listaFiltrada) { $scope.total = 0; }
-                else { $scope.total = $scope.listaFiltrada.length; }
+                if(!$scope.listFiltered) { $scope.total = 0; }
+                else { $scope.total = $scope.listFiltered.length; }
             };
         
             var getStart = function() {
@@ -101,7 +101,7 @@ angular.module('appTable', [
             };
 
             $scope.orderBy = function() {
-                $scope.listaFiltrada = $filter('orderBy')($scope.listaFiltrada, $scope.predicate, $scope.reverse);
+                $scope.listFiltered = $filter('orderBy')($scope.listFiltered, $scope.predicate, $scope.reverse);
             };
 
             init();

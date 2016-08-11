@@ -2,19 +2,21 @@
     <thead>
         <tr>            
             <th ng-repeat="column in columns track by $index" 
-                ng-click="orderColumn(listaFiltrada, column.value, reverse)"
+                ng-click="orderColumn(listFiltered, column.value, reverse)"
                 ng-class="{sortorder_asc  : !reverse && predicate === column.value, 
                            sortorder_desc :  reverse && predicate === column.value, 
-                           sortorder      :             predicate !== column.value}">
+                           sortorder      :             predicate !== column.value}"
+                class="{{column.headerClass}}">
                 {{column.label}}
             </th>            
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="item in listaFiltrada = filterList(list, search) | 
+        <tr ng-repeat="item in listFiltered = filterList(list, search) | 
                        orderBy : predicate : reverse | 
                        limitTo : limitTo.value : start track by $index">            
-            <td ng-repeat="column in columns track by $index" compile="getColumn(item, column)">
+            <td ng-repeat="column in columns track by $index" 
+                compile="getColumn(item, column)">
             </td>            
         </tr>
     </tbody>
