@@ -26,6 +26,7 @@ angular.module('appTable', [
         scope: {
             list: '=',
             columns: '=',
+            events: '=?'
         },
         // transclude: {
         //     'filterContent': '?filterContent',
