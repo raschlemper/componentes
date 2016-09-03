@@ -14,10 +14,10 @@
     <tbody>
         <tr ng-repeat="item in listFiltered = filterList(list, search) | 
                        orderBy : predicate : reverse | 
-                       limitTo : limitTo.value : start track by $index"
-            class="{{column.lineClass}}">            
+                       limitTo : limitTo.value : start track by $index">            
             <td ng-repeat="column in columns track by $index" 
-                compile="getColumn(item, column)">
+                compile="getColumn(item, column)"
+                class="{{column.lineClass}}">
             </td>            
         </tr>
     </tbody>
